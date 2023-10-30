@@ -62,7 +62,8 @@ class RacingCarController {
 
   showWinner(){
     this.#gameResult.setWinner();
-    
+    const winner = this.#gameResult.getWinner();
+    this.#outputView.printWinner(winner);
   }
 }
 

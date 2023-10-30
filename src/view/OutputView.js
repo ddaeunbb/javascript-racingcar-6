@@ -11,7 +11,9 @@ class OutputView {
     Console.print(player + OUTPUT_MESSAGE.RESULT + result);
   }
 
-  
+  printWinner(winner){
+    Console.print(OUTPUT_MESSAGE.WINNER + winner);
+  }
 }
 
 export default OutputView;
