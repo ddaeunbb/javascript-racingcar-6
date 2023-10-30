@@ -53,11 +53,16 @@ class RacingCarController {
     this.#outputView.printGameStart();
     for(let i = 1; i <= totalMove; i+=1){
       players.forEach((player, idx) => {
-        this.#gameResult.moveResult(idx);
+        this.#gameResult.moveCarsResult(idx);
         this.#outputView.printGameResult(player, result[idx]);
       })
       Console.print('\n');
     }
+  }
+
+  showWinner(){
+    this.#gameResult.setWinner();
+    
   }
 }
 

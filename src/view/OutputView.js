@@ -8,8 +8,10 @@ class OutputView {
   }
 
   printGameResult(player, result){
-    Console.print(`${player} : ${result}`);
+    Console.print(player + OUTPUT_MESSAGE.RESULT + result);
   }
+
+  
 }
 
 export default OutputView;
