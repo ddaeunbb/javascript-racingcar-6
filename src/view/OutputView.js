@@ -6,6 +6,10 @@ class OutputView {
   printGameStart(){
     Console.print(OUTPUT_MESSAGE.START);
   }
+
+  printGameResult(player, result){
+    Console.print(`${player} : ${result}`);
+  }
 }
 
 export default OutputView;

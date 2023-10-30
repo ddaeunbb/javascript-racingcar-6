@@ -15,10 +15,15 @@ class GameResult {
     this.#result = Array(num).fill('');
   }
 
+  getResult(){
+    return this.#result;
+  }
+
   moveResult(idx){
     const randomNum = randomNumGenerator();
     if(randomNum >= 4) this.#result[idx] += MOVE_STR;
   }
+
 }
 
 export default GameResult;
