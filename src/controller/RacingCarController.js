@@ -1,3 +1,4 @@
+import { Console } from '@woowacourse/mission-utils';
 import InputView from '../view/InputView';
 import { carNamesConvertor } from '../utils/Convertor';
 import RacingCars from '../domain/RacingCars';
@@ -15,7 +16,13 @@ class RacingCarController {
 
   async receivePlayCount() {
     const playCount = await InputView.readPlayCount();
-    this.#makeRandomMove = new MakeRandomMove(playCount);
+    const totalCarCount = this.#racingCars.getTotalCarCount();
+    this.#makeRandomMove = new MakeRandomMove(playCount, totalCarCount);
+  }
+
+  playRacing() {
+    const moveRandomArr = this.#makeRandomMove.makeRandom();
+    Console.print(moveRandomArr);
   }
 }
 
