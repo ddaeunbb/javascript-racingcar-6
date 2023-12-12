@@ -3,7 +3,7 @@ import RacingCarsValidator from '../validators/RacingCarsValidator';
 import { RANGE_RANDOM } from '../constants/number';
 /**
  * @classdesc RacingCars
- * 차이름과 게임 결과값을 가지고 있다.
+ * 차이름과 게임 결과값을 가지고 있다. 랜덤으로 차를 움직인다.
 */
 class RacingCars {
   #cars = new Map();
@@ -16,15 +16,12 @@ class RacingCars {
   }
 
   moveRandom() {
-    this.#cars.forEach(car => {
+    this.#cars.forEach((_, car) => {
       const { min, max, standard } = RANGE_RANDOM;
       const randomNum = Random.pickNumberInRange(min, max);
-      if(randomNum >= standard) this.#cars.set(car, this.#cars.get(car)+1);
+      if(randomNum >= standard) this.#cars.set(car, this.#cars.get(car)+1);  
     })
-  }
-
-  getTotalCarCount() {
-    return this.#cars.size;
+    return this.#cars;
   }
 }
 

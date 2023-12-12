@@ -1,5 +1,6 @@
 const SYMBOL = {
-  comma: ','
+  comma: ',',
+  hyphen: '-',
 }
 
 export default SYMBOL;
