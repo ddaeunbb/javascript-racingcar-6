@@ -5,7 +5,6 @@ class App {
   async play() {
     await this.#controller.receiveCarNames();
     await this.#controller.receivePlayCount();
-    this.#controller.playRacing();
   }
 }
 

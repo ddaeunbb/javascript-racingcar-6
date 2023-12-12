@@ -2,7 +2,7 @@ import { REGEX_NUM } from '../constants/regex';
 import { ERROR_MESSAGE } from '../constants/error';
 import CustomError from '../exceptions/CustomError';
 
-class MakeRandomValidator {
+class PlayCountValidator {
   /**
   * 숫자인지 확인하는 메서드
   * @param {string} playCount
@@ -25,4 +25,4 @@ class MakeRandomValidator {
   }
 }
 
-export default MakeRandomValidator;
+export default PlayCountValidator;
