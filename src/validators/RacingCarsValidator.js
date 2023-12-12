@@ -1,4 +1,4 @@
-import REGEX_ALPHA from '../constants/regex';
+import {REGEX_ALPHA} from '../constants/regex';
 import CustomError from '../exceptions/CustomError';
 import { ERROR_MESSAGE } from '../constants/error';
 import { LENGTH_NAME } from '../constants/number';
