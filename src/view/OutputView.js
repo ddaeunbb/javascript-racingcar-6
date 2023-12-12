@@ -9,6 +9,10 @@ const OutputView = Object.freeze({
 
   printEachCarResult(car, move) {
     Console.print(`${car} : ${SYMBOL.hyphen.repeat(move)}`);
+  },
+
+  printFinalWinner(winner) {
+    Console.print(OUTPUT_MESSAGE.printFinalWinner + winner);
   }
 });
 

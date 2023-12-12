@@ -5,4 +5,5 @@ export const INPUT_MESSAGE = Object.freeze({
 
 export const OUTPUT_MESSAGE = Object.freeze({
   printGameResult: '실행 결과',
+  printFinalWinner: '최종 우승자 : ',
 });

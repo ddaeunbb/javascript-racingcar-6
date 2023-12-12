@@ -23,6 +23,15 @@ class RacingCars {
     })
     return this.#cars;
   }
+
+  rankWinner() {
+    const max = Math.max(...this.#cars.values());
+    const winner = [];
+    this.#cars.forEach((val, car)=> {
+      if(val === max) winner.push(car);
+    })
+    return winner.join(', ');
+  }
 }
 
 export default RacingCars;

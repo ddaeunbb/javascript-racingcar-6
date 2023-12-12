@@ -4,12 +4,14 @@ import { carNamesConvertor } from '../utils/Convertor';
 import RacingCars from '../domain/RacingCars';
 import PlayCountValidator from '../validators/PlayCountValidator';
 
+
 class RacingCarController {
   #racingCars;
 
   async startGame() {
     await this.receiveCarNames();
     await this.receivePlayCount();
+    this.rankWinner();
   }
 
   async receiveCarNames() {
@@ -34,6 +36,11 @@ class RacingCarController {
       })
       count += 1;
     }
+  }
+
+  rankWinner() {
+    const winner = this.#racingCars.rankWinner();
+    OutputView.printFinalWinner(winner);
   }
 }
 
